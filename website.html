@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mobile Web Project</title>
+    <style>
+        /* GLOBAL STYLES */
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #e91e63;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        nav a.active {
+            color: #e91e63;
+        }
+
+        /* CONTAINER & CARD */
+        .container {
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-top: 20px;
+        }
+
+        /* MEDIA STYLING */
+        .media-placeholder {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: #333;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .media-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h2 { font-size: 1.4rem; margin-bottom: 10px; }
+        h1 { font-size: 2.2rem; }
+
+        audio, video {
+            width: 100%;
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+
+        /* HIDE SECTIONS BY DEFAULT */
+        .page-section { display: none; }
+        .page-section.active-section { display: block; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a id="link-home" class="active" onclick="showPage('home')">Home</a>
+        <a id="link-about" onclick="showPage('about')">About</a>
+        <a id="link-contact" onclick="showPage('contact')">Contact</a>
+    </nav>
+
+    <div class="container">
+        
+        <section id="home" class="page-section active-section">
+            <h1>Home Page</h1>
+            <div class="card">
+                <h2>My Picture</h2>
+ <div style="height: 0; padding-bottom: calc(100.00%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a3e2eb61981e3234819d9d" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"><a href="https://www.kapwing.com/video-editor"></a></p>
+
+                <h2>Activity Video</h2>
+                
+                <div style="height: 678.26px; width: 300.00px; position:relative;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a3e3de55a2aee20f1d1abc" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"><a href="https://www.kapwing.com/video-editor"></a></p>
+</div>
+</section>
+
+        <section id="about" class="page-section">
+            <h1>About Page</h1>
+            <div class="card">
+                <h2>My Hobby</h2>
+   <div style="height: 0; padding-bottom: calc(56.25%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a0844a9f31323498272654" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"><a href="https://www.kapwing.com/video-editor"></a></p>    
+  
+                </div>
+                <h2>Explanation</h2>
+                <audio controls><source src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/output/hobby.mp3" type="audio/mpeg"></audio>
+                <h2> Movie</h2>
+                
+    
+   <div class="video-container">
+        <video controls poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg">
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+   
+            </div>
+        </section>
+
+        <section id="contact" class="page-section">
+            <h1>Contact Page</h1>
+            <div class="card">
+                <h2>My Favorite Place</h2>
+   <div style="height: 0; padding-bottom: calc(100.00%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a08368f794ba6ebfcae939" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"> <a href="https://www.kapwing.com/video-editor"></a></p>
+    
+   
+                </div>
+                <h2>Explanation</h2>
+  <audio controls><source src=" file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/output/contactaudio.mp3" type="audio/mpeg"></audio>
+                <h2>Life of an IT Student</h2>
+  <div style="height: 520.23px; width: 280.00px; position:relative;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a0fb96ddc96774500ac0ec" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 13px; text-align: right;"> <a href="https://www.kapwing.com/video-editor"></a></p>              
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Remove active class from all sections
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active-section');
+            });
+            // Hide active state on nav links
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(pageId).classList.add('active-section');
+            // Set active state on clicked nav link
+            document.getElementById('link-' + pageId).classList.add('active');
+            
+            // Scroll to top automatically
+            window.scrollTo(0,0);
+        }
+    </script>
+
+</body>
+</html>
